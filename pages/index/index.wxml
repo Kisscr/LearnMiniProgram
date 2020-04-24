@@ -1,2 +1,13 @@
 <!--pages/index/index.wxml-->
 <view>我是首页</view>
+
+
+<!-- 可以通过下面的方式获取用户信息 -->
+<button size="mini" bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo">获取授权</button>
+<view>昵称: {{ userInfo.nickName }}</view>
+<view>gender: {{ userInfo.gender }}</view>
+
+
+<!-- 通过open-data的type属性直接获取用户信息,只能展示用户信息 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
