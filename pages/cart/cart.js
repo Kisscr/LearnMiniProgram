@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  // 监听当前tab页的信息
+  onTabItemTap(item) {
+    console.log(item)
+  },
+
 })

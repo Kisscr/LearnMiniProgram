@@ -1,1 +1,5 @@
 /* pages/cart/cart.wxss */
+.active{
+  background-color: #ff5777;
+  color: #fff;
+}

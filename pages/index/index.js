@@ -1,8 +1,8 @@
 // pages/index/index.js
 // getApp() 可以获取 App() 产生的示例对象
 const app = getApp()
-console.log(app.globalData.name)
-console.log(app.globalData.age)
+const name = app.globalData.name
+const age = app.globalData.age
 
 Page({
   data:{

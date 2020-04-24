@@ -1,2 +1,28 @@
 <!--pages/cart/cart.wxml-->
-<text>购物车</text>
+
+<!-- 1. text组件的属性 -->
+<text>购物车\n</text>
+<!-- selectable: 文本是否能长按被选择,属性值是布尔值，必须要用{{}}包裹 -->
+<text selectable>我是购物车页面\n</text>
+<!-- decode: 是否解码,属性值是布尔值，必须要用{{}}包裹 -->
+<text decode>&gt; &nbsp; &lt;&amp; &apos; &ensp; &emsp;</text>
+
+
+<!-- 2. button组件的属性 -->
+<button>普通</button>
+<button size="mini">mini</button>
+<!-- type: 按钮的样式类型 -->
+<button size="mini" type="primary">primary</button>
+<button size="mini" type="default">default</button>
+<button size="mini" type="warn">warn</button>
+<!-- plain: 按钮是否镂空，背景透明色 -->
+<button size="mini" type="primary" plain>primary</button>
+<button size="mini" type="default">default</button>
+<button size="mini" type="warn" plain>warn</button>
+<!-- disabled: 是否禁用 -->
+<button size="mini" type="warn" disabled>禁用</button>
+<!-- loading: 名称前是否带有loading图标 -->
+<button loading>loading</button>
+<!-- hover-class: 指定按钮按下去的样式类名 -->
+<button hover-class="active">hover</button>
+
