@@ -1,2 +1,14 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+
+<!-- Mustache语法的细节 -->
+<view>{{ message }}</view>
+<view>{{ firstname }} {{ lastname }}</view>
+<!-- 可以在里面直接进行拼接 -->
+<view>{{ firstname + ' ' + lastname }}</view>
+<!-- 可以在里面进行判断 -->
+<view>{{ age > 18 ? '成年人' : '未成年人' }}</view>
+
+<view>{{ nowTime }}</view>
+
+<button size="mini" bindtap="handleSwitchColor">切换颜色</button>
+<view class="box {{ isActive ? 'active' : ''}}">哈哈哈</view>

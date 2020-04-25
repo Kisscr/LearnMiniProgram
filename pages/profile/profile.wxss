@@ -1,1 +1,10 @@
 /* pages/profile/profile.wxss */
+
+.box {
+  font-size: 50rpx;
+}
+
+.active {
+  color: pink;
+  font-size: 100rpx;
+}
