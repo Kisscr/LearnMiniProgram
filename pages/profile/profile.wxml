@@ -1,2 +1,32 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+<button size="mini" bindtap="handleSwitchShow">切换显示</button>
+<view wx:if="{{isShow}}">哈哈哈哈哈</view>
+
+<button size="mini" bindtap="handleIncrement">分数递增</button>
+<view wx:if="{{ score > 90 }}">优秀</view>
+<view wx:elif="{{ score > 70 && score <= 90 }}">良好</view>
+<view wx:elif="{{ score > 60 && score <= 70 }}">及格</view>
+<view wx:else>不及格</view>
+
+
+<!-- hidden属性 : 将一个组件隐藏的时候，该组件依然是存在的（display: none）-->
+<view>我是hidden属性控制的内容</view>
+<view>----------------------</view>
+<view hidden>我是hidden属性控制的内容</view>
+
+<!-- wx:if 将一个组件隐藏起来时，该组件根本不存在，压根没有创建 -->
+<view wx:if="{{false}}">我是wx:if属性控制的内容</view>
+
+<!-- 选择：如果显示和隐藏切换的频率非常高，选择使用hidden，反之则选择wx:if -->
+
+<!-- item、index起名字, 一般用于多维数组 -->
+<view wx:for="{{ movies }}" wx:for-item="movie" wx:for-index="i" wx:key="i">{{ movie }} {{i}}</view>
+
+<!-- block里面可以放控制属性，一般用于包裹其他标签，block不会渲染 -->
+<block wx:for="{{ num }}" wx:for-item="innerNums" wx:key="index">
+	<block wx:for="{{innerNums}}" wx:key="index">
+		<view>{{item}}</view>
+	</block>
+</block>
+
+<!-- key的作用主要是为了高效的更新虚拟DOM -->
