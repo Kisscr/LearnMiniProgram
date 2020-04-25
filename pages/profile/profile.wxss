@@ -1,1 +1,28 @@
 /* pages/profile/profile.wxss */
+/* @import + 路径，引入wxss文件 */
+@import './style/box.wxss';
+@import './style/txt.wxss';
+@import './style/searchbar.wxss';
+
+/* view{
+  margin: 10px;
+} */
+/* .box1{
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}*/
+
+/* 在苹果6手机上 ，1px = 2rpx，通常开发中的设计图就是苹果6 */
+/* .box2{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: skyblue;
+}  */
+
+/* .txt1{
+  font-size: 50px;
+}
+.txt2{
+  font-size: 100rpx;
+} */

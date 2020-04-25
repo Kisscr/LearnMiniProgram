@@ -1,0 +1,13 @@
+.box1{
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin-top: 20px;
+}
+
+/* 在苹果6手机上 ，1px = 2rpx，通常开发中的设计图就是苹果6 */
+.box2{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: skyblue;
+}

@@ -1,0 +1,6 @@
+.txt1{
+  font-size: 50px;
+}
+.txt2{
+  font-size: 100rpx;
+}
