@@ -1,1 +1,25 @@
 /* pages/profile/profile.wxss */
+.container1{
+  background-color: pink;
+  white-space: nowrap;
+}
+.item1{
+  width: 200px;
+  height: 200px;
+  background-color: skyblue;
+  margin: 10px;
+  display: inline-block;
+}
+
+.container2{
+  margin-top: 20px;
+  background-color: orange;
+  height: 200px;
+  width: 280px;
+}
+.item2{
+  width: 200px;
+  height: 100px;
+  background-color: skyblue;
+  margin: 10px;
+}

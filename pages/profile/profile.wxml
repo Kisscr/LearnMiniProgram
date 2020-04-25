@@ -1,2 +1,36 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+
+<!-- 1. scroll-x: 水平滚动 -->
+<scroll-view class="container1" 
+              bindscrolltoupper="handleToUpper" 
+              upper-threshold="200"
+              scroll-x
+              scroll-left="300">
+  <view wx:for="{{10}}" class="item1">{{item}}</view>
+</scroll-view>
+
+<!-- 2. scroll-y: 垂直滚动 -->
+<scroll-view class="container2" scroll-y>
+  <view wx:for="{{10}}" class="item2">{{item}}</view>
+</scroll-view>
+
+<!-- 3. 其他事件补充 -->
+<!-- bindscroll：滚动时触发-->
+<!-- bindscrolltoupper：滚动到顶部/左边时触发	 -->
+<!-- bindscrolltolower：滚动到底部/右边时触发	 -->
+<!-- scroll-top: 设置竖向滚动条起始位置 -->
+<!-- scroll-left: 设置横向滚动条起始位置 -->
+<scroll-view class="container2" 
+              scroll-y
+              bindscroll="handleScroll"
+              upper-threshold="200"
+              lower-threshold="200"
+              bindscrolltoupper="handleToUpper"
+              bindscrolltolower="handleToLower"
+              scroll-top="600"
+              scroll-into-view="item11">
+  <view wx:for="{{10}}" class="item2">{{item}}</view>
+  <view class="item2" id="item11">11</view>
+  <view class="item2">12</view>
+  <view class="item2">13</view>
+</scroll-view>

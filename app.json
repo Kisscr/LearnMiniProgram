@@ -39,7 +39,7 @@
         "pagePath": "pages/profile/profile",
         "iconPath": "assets/tabbar/profile.png",
         "selectedIconPath": "assets/tabbar/profile_active.png",
-        "text": "我的"
+        "text": "scroll-view"
       }
     ]
   },

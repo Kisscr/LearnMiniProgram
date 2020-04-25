@@ -7,7 +7,20 @@ Page({
   data: {
 
   },
+  handleScroll(event) {
+    // 可以从event.datail里面获取滚动的参数
+    console.log(event)
+  },
 
+  // 滚动到顶部/左边时触发
+  handleToUpper() {
+    console.log('到底啦')
+  },
+
+  // 滚动到底部/右边时触发
+  handleToLower() {
+    console.log('到底啦')
+  },
   /**
    * 生命周期函数--监听页面加载
    */
