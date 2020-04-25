@@ -1,2 +1,25 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+<view>image组件,默认尺寸 320×240</view>
+
+<!-- 1. 选择相册里面的图片或拍照，wx.chooseImage -->
+<!-- 2. bindload 可以监听图片是否加载完成 ，值是一个回调函数-->
+<!-- 3. lazy-load 图片懒加载，在即将进入一定范围（上下三屏）开始加载，值是布尔值 -->
+<!-- 4. show-menu-by-longpress: 长按可以识别图片小程序码 ，值是布尔值-->
+<view>
+	<button size="mini" type="primary" bindtap="handleChooseImage">更换头像</button>
+</view>
+<image wx:for="{{imagePaths}}" wx:key="index" src="{{ item }}" bindload="handleImageLoad" lazy-load show-menu-by-longpress></image>
+
+<!-- 5. mode: 图片裁剪、缩放的模式 -->
+<image src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="scaleToFill" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="aspectFit" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="aspectFill" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="widthFix" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="heightFix" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="top" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="center" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="bottom" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="right" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="left" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>
+<image mode="top left" src="http://img.go007.com/2016/05/01/3e56e06785162572_3.jpg"></image>

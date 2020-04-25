@@ -1,5 +1,32 @@
 // pages/profile/profile.js
 Page({
+  data: {
+    imagePaths: []
+  },
+
+  // 点击选择图片或拍照
+  handleChooseImage() {
+    // 发送请求
+    wx.chooseImage({
+      success: (res) => {
+        // console.log(res)
+        // 获取路径
+        this.setData({
+          imagePaths: res.tempFilePaths
+        })
+
+        // 在新页面中全屏预览图片,参数urls传入一个数组，可以展示多张图片，可以保存和转发
+        // wx.previewImage({
+        //   urls: res.tempFilePaths
+        // })
+      },
+    })
+  },
+
+  // 图片加载完成时回调
+  handleImageLoad() {
+    console.log('图片加载完成')
+  },
 
   /**
    * 页面的初始数据
