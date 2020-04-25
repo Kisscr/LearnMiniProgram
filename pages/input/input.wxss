@@ -1,0 +1,21 @@
+/* pages/input/input.wxss */
+input{
+  border: 1px solid pink;
+  margin: 10px 30px;
+  padding: 2px 10px;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.placeholderStyle{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #ececec;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 1px 2px;
+  box-sizing: border-box;
+}

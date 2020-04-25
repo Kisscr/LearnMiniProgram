@@ -75,6 +75,13 @@
 					"id": -1,
 					"name": "我的页面",
 					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "input组件",
+					"pathName": "pages/input/input",
 					"scene": null
 				}
 			]

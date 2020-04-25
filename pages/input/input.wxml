@@ -1,0 +1,37 @@
+<!--pages/input/input.wxml-->
+<view>input组件</view>
+
+<view>1. 基本使用</view>
+<input></input>
+
+<view>2. value：input的默认值</view>
+<input value="默认值"></input>
+
+<view>3. type: 弹出键盘的类型(文本/数字/身份证/带小数点)</view>
+<input placeholder="文本输入键盘" type="text"></input>
+<input placeholder="数字输入键盘" type="number"></input>
+<input placeholder="纯数字输入键盘" type="idcard"></input>
+<input placeholder="数字输入键盘" type="digit"></input>
+
+<view>4. password：暗文</view>
+<input password />
+
+<view>5. placeholder: 占位文字,  placeholder-style: 设置占位区的样式，placeholder-class：给占位区加类名</view>
+<input placeholder="我是默认的占位文字" placeholder-style="color: pink; font-size: 25px" placeholder-class="placeholderStyle"/>
+
+<view>6. cursor-spacing: 值是number, 指定光标与键盘的距离</view>
+<input cursor-spacing="100"></input>
+
+<view>7. maxlength: 值是number, 最大输入长度，设置为 -1 的时候不限制最大长度</view>
+<input maxlength="10"></input>
+
+
+<view>8. confirm-type:  设置键盘右下角按钮的文字</view>
+<input placeholder="发送" type="text" confirm-type="send"></input>
+<input placeholder="搜索" type="text" confirm-type="search"></input>
+<input placeholder="下一项" type="text" confirm-type="next"></input>
+<input placeholder="前往" type="text" confirm-type="go"></input>
+<input placeholder="完成" type="text" confirm-type="done"></input>
+
+<view>9. 监听事件</view>
+<input placeholder="事件监听" bindfocus="handleFocus" bindinput="handleInput" bindblur="handleBlur"></input>

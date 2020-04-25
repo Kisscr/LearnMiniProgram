@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/input/input"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -39,7 +40,13 @@
         "pagePath": "pages/profile/profile",
         "iconPath": "assets/tabbar/profile.png",
         "selectedIconPath": "assets/tabbar/profile_active.png",
-        "text": "我的"
+        "text": "image"
+      },
+      {
+        "pagePath": "pages/input/input",
+        "iconPath": "assets/tabbar/profile.png",
+        "selectedIconPath": "assets/tabbar/profile_active.png",
+        "text": "input"
       }
     ]
   },
