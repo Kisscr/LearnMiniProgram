@@ -1,2 +1,16 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+
+<!-- 1. 引入wxs文件,路径必须是相对路径,引入的时候要给wxs标签添加module属性,属性值模块的名字 -->
+<wxs src="../../wxs/info.wxs" module="tools" />
+<view>{{ tools.name }} {{ tools.age }}</view>
+<view>{{ tools.sum(1,4) }}</view>
+
+
+<!-- 2. 通过在wxs文件里写处理函数,来实现对数据的筛选 -->
+<wxs src="../../wxs/format.wxs" module="format" />
+<view>{{ format.priceFormat(12.33665, 3) }}</view>
+
+<!-- <view>{{ date }}</view> -->
+<view>{{ format.time }}</view>
+<view>{{ format.dateFormat(date, '/') }}</view>
+<view>{{ format.dateFormat(date, '-') }}</view>

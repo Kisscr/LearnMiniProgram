@@ -1,0 +1,15 @@
+// 在wxs里面不支持ES6的语法
+
+
+var name = 'cr'
+var age = '26'
+
+function sum(num1, num2) {
+  return num1 + num2
+}
+
+module.exports = {
+  name: name,
+  age: age,
+  sum: sum
+}

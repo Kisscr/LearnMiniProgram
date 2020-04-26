@@ -1,0 +1,31 @@
+// 保留价格为小数点后指定的位数
+function priceFormat (price, number) {
+  // 如果不传值,默认为两位
+  number = number || 2
+
+  // 如果是字符串,先转换成浮点小数
+  price = parseFloat(price)
+
+  return price.toFixed(number)
+}
+
+// 格式化日期
+function dateFormat (date, flag) {
+  var date = getDate(date)
+  var year = date.getFullYear() < 10 ? '0' + date.getFullYear() : date.getFullYear()
+  var month = date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1)
+  var day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate()
+  var hour = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+  var minute = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()
+  var second = date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()
+
+  return year + flag + month + flag + day + ' ' + hour + ':' + minute + ':' + second
+}
+
+
+
+// 导出模块内的变量或函数
+module.exports = {
+  priceFormat : priceFormat,
+  dateFormat: dateFormat
+}

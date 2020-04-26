@@ -68,6 +68,13 @@
 					"id": -1,
 					"name": "购物车",
 					"pathName": "pages/cart/cart",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "wxs语法",
+					"pathName": "pages/profile/profile",
 					"scene": null
 				}
 			]
