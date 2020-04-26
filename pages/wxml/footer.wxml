@@ -1,0 +1,9 @@
+<import src="./a.wxml"/>
+<template is="a"></template>
+
+<include src="./header.wxml"/>
+<template>
+  <view>我是模板内的footer</view>
+</template>
+
+<view>我是模板外的footer</view>

@@ -1,0 +1,4 @@
+<import src="./a.wxml"/>
+<template>
+  <view>b 模板中的内容</view>
+</template>

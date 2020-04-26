@@ -1,0 +1,5 @@
+<template>
+  <view>我是模板内的header</view>
+</template>
+
+<view>我是模板外的header</view>
