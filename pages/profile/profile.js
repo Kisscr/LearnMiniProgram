@@ -1,66 +1,50 @@
 // pages/profile/profile.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    titles: ['衣服', '裤子', '鞋子']
+  },
+  handleItemClick (event) {
+    console.log(event)
+    const index = event.currentTarget.dataset.index
+    const item = event.currentTarget.dataset.item
+    console.log(index)
+    console.log(item)
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleClick(){
+    console.log('按钮被点击了')
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  // 开始触摸的时候触发
+  handleTouchStart () {
+    console.log('handleTouchStart')
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 手指移动商务时候触发
+  handleTouchMove () {
+    console.log('handleTouchMove')
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  // 手指离开时候触发
+  handleTouchEnd () {
+    console.log('handleTouchEnd')
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  // 手指点击的时候触发
+  handleTap () {
+    console.log('handleTap')
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  // 手指长按超过350ms触发
+  handleLongPress() {
+    console.log('handleLongPress')
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleBtnTap (event) {
+    console.log('------', event)
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleBtnEnd (event) {
+    console.log('++++++', event)
   }
 })

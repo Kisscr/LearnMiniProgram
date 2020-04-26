@@ -1,1 +1,17 @@
 /* pages/profile/profile.wxss */
+.box{
+  width: 300px;
+  height: 300px;
+  background-color: pink;
+}
+.container{
+  display: flex;
+}
+
+.item{
+  flex: 1;
+  text-align: center;
+  background-color: skyblue;
+  margin: 5rpx 10rpx;
+  padding: 10rpx;
+}

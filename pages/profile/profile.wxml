@@ -1,2 +1,36 @@
 <!--pages/profile/profile.wxml-->
-<text>我的信息</text>
+<!-- 1. 事件处理的回顾 -->
+<button size="mini" bindtap="handleClick">按钮</button>
+<button size="mini" bind:tap="handleClick">按钮</button>
+<button size="mini" catch:tap="handleClick">按钮</button>
+
+<!-- 2. 常见的一些事件 -->
+<!-- tap 和 longpress 只会触发一个 -->
+<view class="box"
+      bind:touchstart="handleTouchStart"
+      bind:touchmove="handleTouchMove"
+      bind:touchend="handleTouchEnd"
+      bind:tap="handleTap"
+      bind:longpress="handleLongPress"></view>
+
+
+<!-- 3. 事件对象的分析 -->
+<button bind:tap="handleBtnTap"
+        bind:touchend="handleBtnEnd">事件对象</button>
+
+
+4. 事件参数的传递
+<!-- 通过 data- 自定义事件绑定 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item" 
+          bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-item="{{item}}">
+          {{item}}
+    </view>
+  </block>
+</view>
+
+<!-- 5. 用bind绑定的事件,会有冒泡现象,而用catch绑定的事件则不会有冒泡现象 -->
+<!-- 用capture-bind绑定事件,会捕获里面标签的上的事件 -->
