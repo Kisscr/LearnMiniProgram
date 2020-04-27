@@ -1,0 +1,4 @@
+<!--pages/components/my-cpn/my-cpn.wxml-->
+<view class="title">我是标题</view>
+<button size="mini">按钮</button>
+<view>{{ text }}</view>

@@ -1,1 +1,5 @@
 /* pages/index/index.wxss */
+.title{
+  font-size: 30rpx;
+  color: pink;
+}

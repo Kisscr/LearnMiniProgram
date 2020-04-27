@@ -1,0 +1,5 @@
+/* pages/components/my-cpn/my-cpn.wxss */
+.title{
+  font-size: 60rpx;
+  color: pink;
+}

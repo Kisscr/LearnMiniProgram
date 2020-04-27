@@ -1,12 +1,24 @@
-<!--pages/index/index.wxml-->
-<!-- 1. 小程序的数据绑定 -->
-<view>hello world {{ name }}</view>
-<view>年龄： {{ age }}</view>
+<view class="title">hello world</view>
 
-<!-- 2. 列表展示: wx:for -->
-<view wx:for="{{ students }}" wx:key="index">姓名：{{ item.name }}，年龄：{{ item.age }}</view>
 
-<!-- 3. 事件监听改变data -->
-<view>当前计数：{{ counter }}</view>
-<button size="mini" bindtap="handleBtnClick">+</button>
-<button size="mini" bindtap="handleSubtraction">-</button>
+<!-- 使用组件 -->
+<!-- <my-cpn text="我是添加的值" />
+<my-cpn text="hahaha" />
+<my-cpn /> -->
+
+
+<!-- 组件的样式 -->
+<my-style />
+
+<!-- 组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<!-- 使用bind绑定接手过来的事件名称 -->
+<my-event bind:increment="handleIncrement"/>
+
+<!-- tab-control的练习 -->
+<my-tab list="{{['衣服', '裤子', '鞋子']}}"/>
+<my-tab list="{{['键盘', '鼠标', '耳机']}}"/>
+
+<!-- 直接修改组件内的数据 -->
+<button bind:tap="handleAddCpn" size="mini">修改组件内的数据</button>
+<my-sel id="sel"/>

@@ -1,0 +1,18 @@
+/* components/my-tab/my-tab.wxss */
+.container{
+  display: flex;
+  margin-top: 20rpx;
+  background-color: #ececec;
+}
+.tabItem{
+  flex: 1;
+  text-align: center;
+  margin: 20rpx 10rpx;
+}
+.active{
+  color: #ff5777;
+}
+.active text{
+  padding: 12rpx 10rpx;
+  border-bottom: 4rpx solid #ff5777;
+}
