@@ -1,12 +1,23 @@
 <!--pages/index/index.wxml-->
-<!-- 1. 小程序的数据绑定 -->
-<view>hello world {{ name }}</view>
-<view>年龄： {{ age }}</view>
+<!-- 1. 单个插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插入按钮</button>
+</my-slot>
+<view>------------------------</view>
+<my-slot>
+  <text>我是插入的文本</text>
+</my-slot>
+<view>--------------------------</view>
+<my-slot>
+  <slider value="40"></slider>
+</my-slot>
 
-<!-- 2. 列表展示: wx:for -->
-<view wx:for="{{ students }}" wx:key="index">姓名：{{ item.name }}，年龄：{{ item.age }}</view>
-
-<!-- 3. 事件监听改变data -->
-<view>当前计数：{{ counter }}</view>
-<button size="mini" bindtap="handleBtnClick">+</button>
-<button size="mini" bindtap="handleSubtraction">-</button>
+<view>===============================</view>
+<!-- 2. 多个插槽的使用 -->
+<!-- 给每个插槽起一个名字： name属性 -->
+<!-- 必须在component对象中加一个选项： options: { multipleSlots: true } -->
+<my-mslot>
+  <text slot="slot3">呵呵呵呵呵</text>
+  <button size="mini" slot="slot1">按钮</button>
+  <view slot="slot2">哈哈哈哈哈</view>
+</my-mslot>
